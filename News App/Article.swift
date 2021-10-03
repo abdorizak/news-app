@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct Article: Decodable {
+    let headline: String
+    let urlToImage: String?
+    let url: String
+    
+    enum CodingKeys: String, CodingKey {
+        case headline = "title", urlToImage, url
+    }
+}
